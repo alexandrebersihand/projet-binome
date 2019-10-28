@@ -1,0 +1,28 @@
+#form{
+    border-left:solid red;
+    border-right: solid red;
+    border-top:solid red;
+    border-bottom: solid red;
+    width : 500px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+#check{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#npe{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+#soumis {
+    background-color: greenyellow;
+    font-family:arial, serif;
+    font-size:150%;
+    font-style: italic
+}
