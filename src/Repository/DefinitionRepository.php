@@ -9,7 +9,6 @@ use Doctrine\Common\Persistence\ManagerRegistry;
 /**
  * @method Definition|null find($id, $lockMode = null, $lockVersion = null)
  * @method Definition|null findOneBy(array $criteria, array $orderBy = null)
- * @method Definition[]    findAll()
  * @method Definition[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class DefinitionRepository extends ServiceEntityRepository
@@ -19,33 +18,20 @@ class DefinitionRepository extends ServiceEntityRepository
         parent::__construct($registry, Definition::class);
     }
 
-    // /**
-    //  * @return Definition[] Returns an array of Definition objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('d')
-            ->andWhere('d.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('d.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Definition
+    /**
+     * @param int $limit
+     * @return definition []
+     */
+    public function findAll(int $limit=10)
     {
-        return $this->createQueryBuilder('d')
-            ->andWhere('d.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $this->getEntityManager()->createQuery(
+            'SELECT a FROM '.Definition::class.' a'
+
+        )
+            ->setMaxResults($limit)
+            ->getResult();
     }
-    */
 
 }
+

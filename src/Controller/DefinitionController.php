@@ -9,12 +9,21 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefinitionController extends AbstractController
 {
     /**
-     * @Route("/Definition")
+     * @Route("/")
      */
-    public function index(DefinitionRepository $repository)
+    public function index()
 
     {
-        $definition = $repository->findLatestPublished();
+        return $this->render('definition/index.html.twig');
+    }
+
+    /**
+     * @Route("/")
+     */
+    public function index1(DefinitionRepository $repository)
+
+    {
+        $definition = $repository->findAll();
         return $this->render('definition/index.html.twig', [
             'definition' => $definition,
         ]);
