@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Dernieres balises{% endblock %}
+
+{% block body %}
+    <h1>Dernieres balises</h1>
+
+
+    {% if definition is not empty %}
+
+
+        <ul>
+            {% for definition in definition %}
+                <li>
+                    <a href="{{ path('app_definition_show', {id: definition.id}) }}"> {{ definition.nom }}
+                    </a>
+                    {#<a href="{{ path('app_definition_edit' , {id}) }}">Editer</a> #}
+                </li>
+        </ul>
+            {% endfor %}
+
+    {% else %}
+        <p>Pas de balise</p>
+    {% endif %}
+    <a href="{{ path('app_definition_new') }}"> nouveau nom</a>
+
+{% endblock %}
+
+

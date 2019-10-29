@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Nouvelle Balise{% endblock %}
+
+{% block body %}
+    <h1>Nouvella balise</h1>
+
+
+
+    {{ include('definition/_form.html.twig',
+        {action : 'Créer'}) }}
+{% endblock %}

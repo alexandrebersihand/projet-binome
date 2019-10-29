@@ -23,7 +23,7 @@ class DefinitionRepository extends ServiceEntityRepository
      * @param int $limit
      * @return definition []
      */
-    public function findAll(int $limit=10)
+    public function findLatestPublished(int $limit=10)
     {
         return $this->getEntityManager()->createQuery(
             'SELECT a FROM '.Definition::class.' a'
