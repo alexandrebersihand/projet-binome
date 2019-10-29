@@ -3,12 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
         <link rel="stylesheet" type="text/css" href="{{ asset ('css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-article.css') }}">
-        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-listing.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-formulaire.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-styletableau.css') }}">
+        {% endblock %}
     </head>
-    <body>
+
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ path ('app_definition_index') }}"><img class="img" src="{{ asset('img/icon-maison.jpg') }}" alt="Acceuil"
+                                                                       title="Acceuil"></a>
+                </li>
+                <li class="bouton">
+
+                    <a href="{{ path ('app_definition_page1') }}">HTML</a>
+                </li>
+                <li class="bouton">
+                    <a href="{{ path ('app_definition_page2') }}">CSS </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="{{ path ('app_definition_page3') }}"> Tableaux</a>
+                    <div class="dropdown-content-principale">
+                        <div class="tablehtml">
+
+                            <a href="{{ path ('app_definition_page3') }}?#debut-html">HTML
+                            </a>
+                            <div class="dropdown-content-tablehtml">
+                                <a href="{{ path ('app_definition_page3') }}?#balises">Balises HTML</a>
+                            </div>
+                        </div>
+                        <div class="tablecss">
+                            <a href="{{ path ('app_definition_page3') }}?#debut-css">CSS</a>
+                            <div class="dropdown-content-tablecss">
+                                <a href="{{ path ('app_definition_page3') }}?#attribut">Attribut</a>
+                                <a href="{{ path ('app_definition_page3') }}?#pseudo-classe">Pseudo classe</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+            <body>
+
+
+
+    <footer class="site-footer">
+    <div class="contact">
+        <a href="{{ path ('app_definition_formulaire') }}" onclick="">Nous contacter</a>
+    </div>
+    <p>
+        <b>@copyright Alex & Bruno</b>
+    </p>
+
+    </footer>
     </body>
+
+
 </html>
