@@ -6,22 +6,26 @@
     font-family: 'Times New Roman', serif;
     font-size: 30px;
 }*/
-caption{
-    background-color: aquamarine;
-    border-left:solid red;
-    border-right: solid red;
-    border-top:solid red;
-    border-bottom: solid red;
-    width : 500px;
+caption {
+    background-color: #7ea9ac;
+    border: solid #000000;
     font-size: 25px;
 }
-tr{
-    background-color: gray ;
+
+tr {
+    border-bottom: solid #000000;
     display: flex;
     justify-content: space-around;
-    width : 500px;
-    border:solid blue;
+    width: 800px;
 }
+
+table {
+    margin-left: 10px;
+    border-collapse: collapse;
+    border: solid #000000;
+    background-color: gray;
+}
+
 /*body{
     position :relative;
     top: 70px; 
@@ -42,6 +46,6 @@ tr{
 
 
     caption{
-        width:350px;
+        width: auto;
     }
 }
