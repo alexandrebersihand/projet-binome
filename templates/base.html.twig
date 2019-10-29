@@ -16,8 +16,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="{{ path ('app_definition_index') }}"><img class="img" src="{{ asset('img/icon-maison.jpg') }}" alt="Acceuil"
-                                                                       title="Acceuil"></a>
+                    <a href="{{ path ('app_definition_index') }}"><img class="img" src="{{ asset('img/icon-maison.jpg') }}" alt="Acceuil" title="Acceuil"></a>
                 </li>
                 <li class="bouton">
 
@@ -49,12 +48,8 @@
             </ul>
         </nav>
     </header>
-
         {% block body %}{% endblock %}
-            <body>
-
-
-
+    <body>
     <footer class="site-footer">
     <div class="contact">
         <a href="{{ path ('app_definition_formulaire') }}" onclick="">Nous contacter</a>
@@ -62,9 +57,6 @@
     <p>
         <b>@copyright Alex & Bruno</b>
     </p>
-
     </footer>
     </body>
-
-
 </html>
