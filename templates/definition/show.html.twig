@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <article>
+        <h1>{{ definition.nom | upper }}</h1>
+
+        <div>
+            {{ definition.content | nl2br }}
+        </div>
+    </article>
+{% endblock %}
+
+{% block title %}
+    {{ definition.nom }}
+{% endblock %}
+
