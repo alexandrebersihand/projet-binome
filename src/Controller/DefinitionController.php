@@ -112,4 +112,23 @@ class DefinitionController extends AbstractController
             'id' => $definition->getId(),
         ]);
     }
+
+    /**
+     * @route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"})
+     */
+    public function edit(Request $request, Definition $definition)
+    {
+        $form =$this->createForm(DefinitionType::class, $definition
+           );
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            return $this->persistDefinition($definition, 'La balise a bien été modifiée');
+        }
+        return $this->render('definition/update.html.twig', [
+
+            'form' => $form->createView(),
+            'definition' => $definition,
+
+        ]);
+    }
 }

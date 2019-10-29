@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update balise{% endblock %}
+
+{% block body %}
+    <h1>Modification balise</h1>
+    {{ include('definition/_form.html.twig',
+        {action : 'Edit'}) }}
+{% endblock %}

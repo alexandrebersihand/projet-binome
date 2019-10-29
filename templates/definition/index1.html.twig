@@ -15,7 +15,7 @@
                 <li>
                     <a href="{{ path('app_definition_show', {id: definition.id}) }}"> {{ definition.nom }}
                     </a>
-                    {#<a href="{{ path('app_definition_edit' , {id}) }}">Editer</a> #}
+                    <a href="{{ path('app_definition_edit' , {id: definition.id}) }}">Editer</a>
                 </li>
         </ul>
             {% endfor %}
