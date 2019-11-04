@@ -34,27 +34,31 @@
         <div id="balises">
             <h2>Balises</h2>
         </div>
-        <table>
-            <caption>Définition HTML</caption>
-            <thead>
-                <tr>
-                    <th>Balises</th>
-                    <th>Language</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            {#{% for definitions in definition %}#}
-                <tbody>
-                    <tr>
-                        <td>{#{{ nom: definition.nom }}#}</td>
-                        <td>{#{{ language: definition.language }}#}</td>
-                        <td>{#{{ content: definition.content }}#}</td>
+            <table>
+             <caption>Définition HTML</caption>
+                <thead>
+                 <tr>
+                        <th>Balises</th>
+                        <th>Language</th>
+                        <th>Description</th>
                     </tr>
-                </tbody>
-                <tfoot>
-                </tfoot>
-            {#{% endfor %}#}
-        </table>
+                </thead>
+
+
+                 <tbody>
+                     <tr>
+                         {% for definition in definition %}
+
+                         <td> {nom: definition.nom} </td>
+                         <td> {language: definition.language } </td>
+                         <td> {content: definition.content } </td>
+                         {% endfor %}
+                     </tr>
+                 </tbody>
+                    <tfoot>
+                    </tfoot>
+
+            </table>
         <div id="attribut">
             <h2>Attributs</h2>
         </div>
