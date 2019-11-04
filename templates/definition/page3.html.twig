@@ -47,10 +47,13 @@
                     </thead>
                     <tbody>
                     {% if definition is not empty %}
-                        {% for definition in definition %}  <tr>
-                            <td class="balise"><a href="{{ path('app_definition_show', {id: definition.id}) }}"> {{ definition.nom }} </a></td>
-                            <td class="language">{{ definition.language }}</td>
-                            <td class="description">{{ definition.content }}</td>   </tr>
+                        {% for definition in definition %}
+                            <tr>
+                                <td class="balise"><a href="{{ path('app_definition_show', {id: definition.id}) }}">{{ definition.nom }} </a></td>
+                                <td class="language">{{ definition.language }}</td>
+                                <td class="description">{{ definition.content | truncate(120) }}
+                                    <a href="{{ path('app_definition_show', {id: definition.id}) }}"> Voir plus </a></td>
+                            </tr>
                         {% endfor %}
                     {% else %}
                         <p>Pas de balise</p>
