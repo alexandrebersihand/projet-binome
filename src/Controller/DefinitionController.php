@@ -15,14 +15,14 @@ use Symfony\Component\HttpFoundation\Request;
 class DefinitionController extends AbstractController
 {
     /**
-     * @Route("/index1", methods="GET")
+     * @Route("/page3", methods="GET")
      */
     public function index1(DefinitionRepository $repository)
 
     {
          $definition = $repository->findLatestPublished();
 
-        return $this->render('definition/index1.html.twig', [
+        return $this->render('definition/page3.html.twig', [
             'definition' => $definition,
         ]);
     }

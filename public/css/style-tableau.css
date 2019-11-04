@@ -12,11 +12,13 @@ caption {
     font-size: 25px;
 }
 
-tr {
+tr{
     border-bottom: solid #000000;
-    display: flex;
-    justify-content: space-around;
-    width: 800px;
+}
+
+th.balise, th.language, td.balise, td.language{
+    text-align: center;
+    width: 200px;
 }
 
 table {

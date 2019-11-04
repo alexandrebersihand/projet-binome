@@ -8,8 +8,6 @@
 
 
     {% if definition is not empty %}
-
-
         <ul>
             {% for definition in definition %}
                 <li>
@@ -17,9 +15,8 @@
                     </a>
                     <a href="{{ path('app_definition_edit' , {id: definition.id}) }}">Editer</a>
                 </li>
-        </ul>
             {% endfor %}
-
+        </ul>
     {% else %}
         <p>Pas de balise</p>
     {% endif %}
