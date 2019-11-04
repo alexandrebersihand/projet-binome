@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Definition;
 use App\Form\DefinitionType;
 use App\Repository\DefinitionRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -82,6 +83,7 @@ class DefinitionController extends AbstractController
 
     /**
      * @route("/new", methods={"GET", "POST"})
+     * @IsGranted("ROLE_AUTHOR")
      */
     public function new(Request $request)
     {
@@ -115,6 +117,7 @@ class DefinitionController extends AbstractController
 
     /**
      * @route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"})
+     * @IsGranted("ROLE_AUTHOR")
      */
     public function edit(Request $request, Definition $definition)
     {
