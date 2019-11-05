@@ -1,22 +1,16 @@
-/*a[href="../Index.html"]{
-    background-color: yellow;
-    position: absolute;
-    top: 500px; 
-    left: 200px;
-    font-family: 'Times New Roman', serif;
-    font-size: 30px;
-}*/
 caption {
-    background-color: #7ea9ac;
-    border: solid #000000;
+
+    background-color: sienna;
+    border: solid sienna;
     font-size: 25px;
 }
 
-tr{
-    border-bottom: solid #000000;
+tr {
+    border-bottom: solid sienna;
 }
 
-th.balise, th.language, td.balise, td.language{
+th.balise, th.language, td.balise, td.language {
+    border-radius: 5px;
     text-align: center;
     width: 200px;
 }
@@ -24,22 +18,17 @@ th.balise, th.language, td.balise, td.language{
 table {
     margin-left: 10px;
     border-collapse: collapse;
-    border: solid #000000;
-    background-color: gray;
+    border: solid sienna;
+    background-color: beige;
 }
 
-/*body{
-    position :relative;
-    top: 70px; 
-    left: 80px;
-}*/
-/*#fix{
+#fix {
     background-color: forestgreen;
     position: fixed;
     top: 80px;
     left: 700px;
+}
 
-}*/
 @media only screen
   and (min-width: 320px)
   and (max-width: 980px)
@@ -47,7 +36,7 @@ table {
          align-items: flex-end; } 
 
 
-    caption{
+    caption {
         width: auto;
     }
 }
