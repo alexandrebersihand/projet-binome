@@ -13,14 +13,13 @@ class DefinitionVoter extends Voter
     {
         // replace with your own logic
         // https://symfony.com/doc/current/security/voters.html
-        return in_array($attribute, ['ARTICLE_EDIT'])
+            return in_array($attribute, ['ARTICLE_EDIT'])
             && $subject instanceof Definition;
     }
 
     protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
     {
         $user = $token->getUsername();
-        dump($user);
         // if the user is anonymous, do not grant access
        if (!$user instanceof UserInterface) {
             dump($user);
