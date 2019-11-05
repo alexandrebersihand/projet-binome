@@ -31,6 +31,17 @@ class Definition
      */
     private $content;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $role;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="definitions")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +79,30 @@ class Definition
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getRole(): ?int
+    {
+        return $this->role;
+    }
+
+    public function setRole(int $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): self
+    {
+        $this->author = $author;
 
         return $this;
     }

@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -42,6 +44,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=50)
      */
     private $lastName;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Definition", mappedBy="author")
+     */
+    private $definitions;
+
+    public function __construct()
+    {
+        $this->definitions = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -141,6 +153,37 @@ class User implements UserInterface
     public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Definition[]
+     */
+    public function getDefinitions(): Collection
+    {
+        return $this->definitions;
+    }
+
+    public function addDefinition(Definition $definition): self
+    {
+        if (!$this->definitions->contains($definition)) {
+            $this->definitions[] = $definition;
+            $definition->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDefinition(Definition $definition): self
+    {
+        if ($this->definitions->contains($definition)) {
+            $this->definitions->removeElement($definition);
+            // set the owning side to null (unless already changed)
+            if ($definition->getAuthor() === $this) {
+                $definition->setAuthor(null);
+            }
+        }
 
         return $this;
     }

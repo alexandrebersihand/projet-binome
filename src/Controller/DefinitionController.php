@@ -117,11 +117,12 @@ class DefinitionController extends AbstractController
 
     /**
      * @route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"})
-     * @IsGranted("ROLE_AUTHOR")
+     * @IsGranted("ARTICLE_EDIT", subject="definition")
      */
     public function edit(Request $request, Definition $definition)
     {
         $form =$this->createForm(DefinitionType::class, $definition
+
            );
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
