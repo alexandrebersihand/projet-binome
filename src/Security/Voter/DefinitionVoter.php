@@ -19,19 +19,21 @@ class DefinitionVoter extends Voter
 
     protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
     {
-        $user = $token->getUsername();
-        // if the user is anonymous, do not grant access
+        $user = $token->getUser();
+                // if the user is anonymous, do not grant access
        if (!$user instanceof UserInterface) {
-            dump($user);
-            return false;
+              return false;
         }
-
-        // ... (check conditions and return true to grant permission) ...
+       // ... (check conditions and return true to grant permission) ...
         switch ($attribute) {
             case 'ARTICLE_EDIT':
+
                 // logic to determine if the user can EDIT
                 // return true or false
-                return $user == $subject->getAuthor()->getUsername();
+
+                if ($subject->getAuthor()->getId() === $user->getId()) {
+                    return true;
+                }
                 break;
         }
 

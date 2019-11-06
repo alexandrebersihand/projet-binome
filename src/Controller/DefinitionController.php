@@ -122,7 +122,6 @@ class DefinitionController extends AbstractController
     public function edit(Request $request, Definition $definition)
     {
         $form =$this->createForm(DefinitionType::class, $definition
-
            );
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
