@@ -6,7 +6,7 @@ html{
 
 body{
   margin: 0;
-  background-color: rgb(231, 231, 231);
+  background-color: beige;
   
 }
 
@@ -231,7 +231,9 @@ a .tablehtml{
  .site-footer a:hover{
       background-color: green;
   }
-
+h1 {
+  text-align: center  ;
+}
 
   /* ADMIN */
 /* manipulation pour acceder au panel ADMIN et listing

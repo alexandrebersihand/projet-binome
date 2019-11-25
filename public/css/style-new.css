@@ -1,11 +1,9 @@
-.page-wrap {
-    background-color: beige;
-    justify-content: center;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-#form {
+#new_article {
     background-color: beige;
     display: flex;
     flex-direction: column;
@@ -21,22 +19,19 @@
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
-#check {
-    justify-content: space-around;
-    border-radius: 15px;
-}
-#npe {
+ div {
+
+ }
+input#definition_Nom, input#definition_Language, textarea#definition_Content {
+    margin-top: 5px;
+    margin-left: 5px;
     display: flex;
     flex-direction: column;
-}
-
-#soumis {
-    background-color: #a58f6a;
-    font-family:arial, serif;
-    font-size:150%;
-    font-style: italic
-}
-
-#submit, #Merci {
     border-radius: 5px;
+}
+
+textarea#definition_Content {
+    margin-bottom: 5px;
+    width: 95%;
+    height: 170px;
 }

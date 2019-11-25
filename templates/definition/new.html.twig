@@ -5,8 +5,8 @@
 
 {% block body %}
     <h1>Insérer une nouvelle balise</h1>
-
-    {{ include('definition/_form.html.twig',
-        {action : 'Créer'}) }}
-
+    <div id="new_article">
+        {{ include('definition/_form.html.twig',
+        { action : 'Créer' }) }}
+    </div>
 {% endblock %}

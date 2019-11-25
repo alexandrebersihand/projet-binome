@@ -1,11 +1,4 @@
-.page-wrap {
-    background-color: beige;
-    justify-content: center;
-}
-
-
-
-#form {
+#form-login {
     background-color: beige;
     display: flex;
     flex-direction: column;
@@ -20,23 +13,4 @@
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-#check {
-    justify-content: space-around;
-    border-radius: 15px;
-}
-#npe {
-    display: flex;
-    flex-direction: column;
-}
-
-#soumis {
-    background-color: #a58f6a;
-    font-family:arial, serif;
-    font-size:150%;
-    font-style: italic
-}
-
-#submit, #Merci {
-    border-radius: 5px;
 }

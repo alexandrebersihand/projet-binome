@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-article.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-listing.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-formulaire.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-tableau.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-article.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-listing.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-formulaire.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-tableau.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-new.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style-form-login.css') }}">
         {% endblock %}
     </head>
 
@@ -29,7 +31,6 @@
                     <a class="dropbtn" href="{{ path ('app_definition_page3') }}"> Tableaux</a>
                     <div class="dropdown-content-principale">
                         <div class="tablehtml">
-
                             <a href="{{ path ('app_definition_page3') }}?#debut-html">HTML
                             </a>
                             <div class="dropdown-content-tablehtml">
