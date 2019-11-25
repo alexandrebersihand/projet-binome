@@ -1,8 +1,14 @@
+#button-insertion{
+    margin-left: 10px;
+}
+a {
+    text-decoration: none;
+}
 caption {
-
     background-color: sienna;
     border: solid sienna;
     font-size: 25px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 tr {
@@ -10,17 +16,19 @@ tr {
 }
 
 th.balise, th.language, td.balise, td.language {
-    border-radius: 5px;
+
     text-align: center;
     width: 200px;
 }
 
 table {
     margin-left: 10px;
+    margin-right: 10px;
     border-collapse: collapse;
     border: solid sienna;
     background-color: beige;
 }
+
 
 #fix {
     background-color: forestgreen;

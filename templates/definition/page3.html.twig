@@ -26,6 +26,7 @@
             <div id="debut-html">
                 <h1>HTML</h1>
             </div>
+            <br>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
                 maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec dictum
                 tincidunt, mollis commodo mauris. Nullam ac congue tortor. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -39,19 +40,20 @@
                 ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
                 Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
             </p>
+            <br>
             <div id="balises">
                 <h2>Balises</h2>
             </div>
-                <table id="tableau">
-                 <caption>Définition</caption>
-                    <thead>
-                        <tr>
-                            <th class="balise">Balises</th>
-                            <th class="language">Language</th>
-                            <th class="description">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <table id="tableau">
+                <caption>Définition</caption>
+                <thead>
+                    <tr>
+                        <th class="balise">Balises</th>
+                        <th class="language">Language</th>
+                        <th class="description">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
                     {% if definition is not empty %}
                         {% for definition in definition %}
                             <tr>
@@ -59,22 +61,27 @@
                                 <td class="language">{{ definition.language }} </td>
                                 <td><a href="{{ path('app_definition_edit' , {id: definition.id}) }}">Modifier</a></td></td>
                                 <td class="description">{{ definition.content | truncate(110) }}
-
-                                    <a href="{{ path('app_definition_show', {id: definition.id}) }}"> Voir plus </a>
-
+                                <a href="{{ path('app_definition_show', {id: definition.id}) }}"> Voir plus </a>
                             </tr>
                         {% endfor %}
                     {% else %}
                         <p>Pas de balise</p>
                     {% endif %}
-                    <a href="{{ path('app_definition_new') }}"> Insérer une nouvelle balise</a>
-                    </tbody>
-                    <tfoot>
-                    </tfoot>
-                </table>
+                    <br>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+            <br>
+            <button id="button-insertion">
+                <a href="{{ path('app_definition_new') }}" id="lien-insertion"> Insérer une nouvelle balise</a>
+            </button>
+            <br>
+            <br>
             <div id="attribut">
                 <h2>Attributs</h2>
             </div>
+            <br>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
                 maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec
@@ -88,9 +95,12 @@
                 consectetur adipiscing elit. Sed sed gravida mi, ac semper libero. Quisque id tincidunt nisl, sit amet
                 ornare felis. Vivamus et purus in lorem luctus consectetur ac vel felis. Etiam lacinia accumsan mattis.
                 Sed neque metus, efficitur a nulla a, venenatis porta velit. Nullam suscipit lobortis luctus. Donec
+            <br>
+            <br>
             <div id="pseudo-classe">
                 <h2>Pseudo-classe</h2>
             </div>
+            <br>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut est efficitur, sollicitudin sapien in,
                 maximus arcu. Aliquam tristique arcu placerat metus iaculis bibendum. Nulla tellus nulla, semper nec dictum
